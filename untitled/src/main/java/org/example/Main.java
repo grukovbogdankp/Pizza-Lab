@@ -33,7 +33,6 @@ public class Main {
         }
     }
 
-    // ---------- Підменю піц ----------
     private static void pizzaMenu() {
         while (true) {
             System.out.println("""
@@ -78,7 +77,7 @@ public class Main {
         }
     }
 
-    // ---------- Підменю клієнтів ----------
+
     private static void customerMenu() {
         while (true) {
             System.out.println("""
@@ -115,7 +114,7 @@ public class Main {
         }
     }
 
-    // ---------- Замовлення, збереження, завантаження ----------
+
     private static void makeOrder() {
         System.out.print("Email клієнта: ");
         String email = SC.nextLine();

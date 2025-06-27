@@ -6,7 +6,7 @@ public class Pizzeria {
     private final Map<String, Pizza> pizzas = new HashMap<>();
     private final Map<String, Customer> customers = new HashMap<>();
 
-    // ---------- CRUD піц ----------
+
     public void addPizza(Pizza p)            { pizzas.put(p.getName(), p); }
     public Pizza getPizza(String name)       { return pizzas.get(name); }
     public Collection<Pizza> listPizzas()    { return pizzas.values(); }
@@ -28,13 +28,12 @@ public class Pizzeria {
         return true;
     }
 
-    // ---------- CRUD клієнтів ----------
+
     public void addCustomer(Customer c)          { customers.put(c.getEmail(), c); }
     public Customer getCustomer(String email)    { return customers.get(email); }
     public Collection<Customer> listCustomers()  { return customers.values(); }
     public void removeCustomer(String email)     { customers.remove(email); }
 
-    /** Оновити ім’я клієнта. */
     public boolean updateCustomerName(String email, String newName) {
         Customer c = customers.get(email);
         if (c == null) return false;
@@ -43,7 +42,7 @@ public class Pizzeria {
         return true;
     }
 
-    // ---------- Замовлення ----------
+
     public double placeOrder(String email, Map<String,Integer> items) {
         Customer customer = customers.get(email);
         if (customer == null) throw new IllegalArgumentException("Клієнта не знайдено: " + email);
